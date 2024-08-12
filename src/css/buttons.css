@@ -11,10 +11,10 @@
 }
 
 .primary:hover {
-  background-color: #087345;
+  background-color: #0f8a58;
   transition-duration: 50ms;
 }
 
 .primary:active {
-  background-color: #075230;
+  background-color: #0c6e42;
 }
