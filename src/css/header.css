@@ -22,6 +22,7 @@
   flex-direction: row;
   gap: 12px;
   padding-right: 12px;
+  padding-top: 4px;
 }
 
 .top {
