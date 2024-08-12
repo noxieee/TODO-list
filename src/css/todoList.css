@@ -1,0 +1,10 @@
+.todoList {
+  padding: 24px;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 16px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}

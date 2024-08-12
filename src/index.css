@@ -5,4 +5,52 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #3a3a3a;
+}
+
+h1 {
+  color: #ffffff;
+  margin: 0;
+}
+
+h2 {
+  color: #eeeeee;
+  margin: 0;
+}
+
+p {
+  color: #eeeeee;
+  margin: 2px 0 2px 0;
+}
+
+/* Custom checkbox design, looks like a radio, acts like a checkbox */
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #4b4b4b;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]:checked {
+  border: 2px solid #0F9B62FF;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 100ms transform ease-in-out;
+  background-color: #0f9b62;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }

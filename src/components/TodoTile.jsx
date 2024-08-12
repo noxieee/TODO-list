@@ -1,9 +1,9 @@
-import "../css/App.css"
+import "../css/todoTile.css"
 
-export function TodoTile({text}) {
+export function TodoTile({title}) {
   return (
       <div className="todoTile">
-        {text}
+        <p className="todoTitle">{title}</p>
         <input type="checkbox"/>
       </div>
   );

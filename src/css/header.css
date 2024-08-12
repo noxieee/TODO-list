@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 24px;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.divider {
+  width: 100%;
+  margin: 0;
+  border: 0 solid #282828;
+  border-top-width: 2px;
+  border-radius: 12px;
+}
+
+.completedCheckbox {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding-right: 12px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

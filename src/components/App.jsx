@@ -1,9 +1,9 @@
-import '../css/App.css';
+import '../css/app.css';
 import {TodoListWrapper} from "./TodoListWrapper";
 
 function App() {
   return (
-      <div className="App">
+      <div className="app">
         <TodoListWrapper/>
       </div>
   );
