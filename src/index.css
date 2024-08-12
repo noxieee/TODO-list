@@ -35,6 +35,7 @@ input[type="checkbox"] {
   border-radius: 50%;
   display: grid;
   place-content: center;
+  flex: none;
 }
 
 input[type="checkbox"]:checked {

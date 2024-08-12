@@ -1,4 +1,5 @@
 import "../css/todoList.css"
+import "../css/typography.css"
 
 import {TodoTile} from "./TodoTile";
 import {CompletedTitle} from "./CompletedTitle";
@@ -6,12 +7,12 @@ import {CompletedTitle} from "./CompletedTitle";
 export function TodoList() {
   return (
       <div className="todoList">
-
-        <TodoTile title="1"/>
-        <TodoTile title="2"/>
+        <p className="subtleText">Nothing there...</p>
+        <TodoTile title="aaaaaaaa"/>
+        <TodoTile title="bbbbbbbb"/>
         <CompletedTitle/>
-        <TodoTile title="3"/>
-        <TodoTile title="4"/>
+        <TodoTile title="cccccccc"/>
+        <TodoTile title="dddddddd"/>
       </div>
   );
 }

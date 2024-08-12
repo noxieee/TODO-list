@@ -1,4 +1,5 @@
 import "../css/completedTitle.css"
+import "../css/typography.css"
 
 export function CompletedTitle() {
   return (

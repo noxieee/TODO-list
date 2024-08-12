@@ -4,9 +4,9 @@ export function Header() {
   return (
       <div className="header">
         <div className="top">
-          <h1>TODO List</h1>
+          <h1 className="title">TODO List</h1>
           <div className="completedCheckbox">
-            <p>Show completed</p>
+            <p className="label">Show completed</p>
             <input type="checkbox"/>
           </div>
         </div>

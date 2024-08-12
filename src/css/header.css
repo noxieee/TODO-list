@@ -17,16 +17,27 @@
 }
 
 .completedCheckbox {
-  margin: 0;
   display: flex;
   flex-direction: row;
   gap: 12px;
   padding-right: 12px;
   padding-top: 4px;
+  margin: 0 0 0 24px;
+  align-items: center;
 }
 
 .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.label {
+  display: flex;
+  flex: 0 1 auto;
+}
+
+.title {
+  display: flex;
+  flex: none;
 }
