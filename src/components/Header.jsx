@@ -1,6 +1,12 @@
 import "../css/header.css"
 
 export function Header({showCompleted, onShowCompletedChange}) {
+  function handleShowCompletedChange() {
+    onShowCompletedChange(!showCompleted);
+  }
+
+  console.log("header")
+
   return (
       <div className="header">
         <div className="top">
@@ -10,7 +16,7 @@ export function Header({showCompleted, onShowCompletedChange}) {
             <input
                 type="checkbox"
                 checked={showCompleted}
-                onChange={(e) => onShowCompletedChange(e.target.checked)}
+                onChange={handleShowCompletedChange}
             />
           </div>
         </div>

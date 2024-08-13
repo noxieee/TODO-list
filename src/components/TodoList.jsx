@@ -1,11 +1,10 @@
 import "../css/todoList.css"
 import "../css/typography.css"
-
-
 import {TodoTile} from "./TodoTile";
 import {CompletedTitle} from "./CompletedTitle";
 
-export function TodoList({todos, showCompleted}) {
+export function TodoList({todos, showCompleted, updateTodos}) {
+  console.log("todolist");
   todos.sort((a, b) => a.completed - b.completed);
   const rows = [];
   let completedExists = false;
@@ -30,7 +29,7 @@ export function TodoList({todos, showCompleted}) {
       rows.push(<CompletedTitle completedExists={completedExists}/>);
     }
 
-    rows.push(<TodoTile title={todo.title} completed={todo.completed}/>);
+    rows.push(<TodoTile id={todo.id} title={todo.title} completed={todo.completed} todos={todos} updateTodos={updateTodos}/>);
 
     if(todos[todos.length - 1] === todo && !todo.completed && showCompleted) {
       rows.push(<CompletedTitle completedExists={completedExists}/>);
