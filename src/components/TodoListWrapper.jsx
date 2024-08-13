@@ -12,7 +12,7 @@ export function TodoListWrapper() {
       <div className="todoListWrapper">
         <Header showCompleted={showCompleted} onShowCompletedChange={setShowCompleted}/>
         <TodoList todos={todos} showCompleted={showCompleted} updateTodos={setTodoChanges}/>
-        <NewTodoPanel updateTodos={setTodoChanges}/>
+        <NewTodoPanel todos={todos} updateTodos={setTodoChanges}/>
       </div>
   );
 }
@@ -20,7 +20,7 @@ export function TodoListWrapper() {
 const TODOS = [
   {id: 0, title: "Saving todos inside a json?", completed: false},
   {id: 1, title: "Button for deleting all completed todos?", completed: false},
-  {id: 2, title: "Implement adding new todos", completed: false},
+  {id: 2, title: "Implement adding new todos", completed: true},
   {id: 3, title: "Create a static version of the app", completed: true},
   {id: 4, title: "Make the app somewhat responsive", completed: true},
   {id: 5, title: "Implement conditional list rendering", completed: true},

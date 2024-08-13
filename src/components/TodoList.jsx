@@ -27,7 +27,16 @@ export function TodoList({todos, showCompleted, updateTodos}) {
       rows.push(<CompletedTitle key="completedTitle" completedExists={completedExists}/>);
     }
 
-    rows.push(<TodoTile key={todo.id} id={todo.id} title={todo.title} completed={todo.completed} todos={todos} updateTodos={updateTodos}/>);
+    rows.push(
+        <TodoTile
+            key={todo.id}
+            id={todo.id}
+            title={todo.title}
+            completed={todo.completed}
+            todos={todos}
+            updateTodos={updateTodos}
+        />
+    );
 
     if(todos[todos.length - 1] === todo && !todo.completed && showCompleted) {
       rows.push(<CompletedTitle key="completedTitle" completedExists={completedExists}/>);
