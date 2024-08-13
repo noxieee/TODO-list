@@ -3,11 +3,13 @@ import {useState} from "react";
 
 export function TodoTile({id, title, completed, todos, updateTodos}) {
   const todoID = id;
-
   const [isCompleted, setIsCompleted] = useState(completed);
+  let checkboxDisabled = false;
 
   function handleCompletedChange() {
-    setIsCompleted(!isCompleted);
+    if(isCompleted === completed) {
+      setIsCompleted(!isCompleted);
+    }
 
     setTimeout(() => {
       const modifiedTodos = todos.map(todo => {
