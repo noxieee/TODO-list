@@ -39,8 +39,6 @@ export function TodoList({todos, showCompleted}) {
     lastCompleted = todo.completed;
   }
 
-
-
   return (
       <div className="todoList">
         {rows}
