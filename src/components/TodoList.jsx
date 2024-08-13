@@ -30,7 +30,7 @@ export function TodoList({todos, showCompleted}) {
       rows.push(<CompletedTitle completedExists={completedExists}/>);
     }
 
-    rows.push(<TodoTile title={todo.title}/>);
+    rows.push(<TodoTile title={todo.title} completed={todo.completed}/>);
 
     if(todos[todos.length - 1] === todo && !todo.completed && showCompleted) {
       rows.push(<CompletedTitle completedExists={completedExists}/>);
