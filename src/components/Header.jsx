@@ -5,8 +5,6 @@ export function Header({showCompleted, onShowCompletedChange}) {
     onShowCompletedChange(!showCompleted);
   }
 
-  console.log("header")
-
   return (
       <div className="header">
         <div className="top">

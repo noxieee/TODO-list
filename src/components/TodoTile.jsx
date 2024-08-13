@@ -4,25 +4,33 @@ import {useState} from "react";
 export function TodoTile({id, title, completed, todos, updateTodos}) {
   const todoID = id;
 
-  function handleCompletedChange() {
-    const modifiedTodos = todos.map(todo => {
-      if(todoID !== todo.id) {
-        return todo;
-      }
-      else {
-        return {
-          ...todo, completed: !completed
-        }
-      }
-    });
+  const [isCompleted, setIsCompleted] = useState(completed);
 
-    updateTodos(modifiedTodos);
+  function handleCompletedChange() {
+    setIsCompleted(!isCompleted);
+
+    setTimeout(() => {
+      const modifiedTodos = todos.map(todo => {
+        if(todoID !== todo.id) {
+          return todo;
+        }
+        else {
+          return {
+            ...todo, completed: !completed
+          }
+        }
+      });
+
+      modifiedTodos.sort((a, b) => a.completed - b.completed);
+      updateTodos(modifiedTodos);
+
+    }, 500);
   }
 
   return (
-      <div className="todoTile">
+      <div className={`todoTile ${isCompleted ? "completed" : ""}`}>
         <p className="todoTitle">{title}</p>
-        <input type="checkbox" checked={completed} onChange={handleCompletedChange}/>
+        <input type="checkbox" checked={isCompleted} onChange={handleCompletedChange}/>
       </div>
   );
 }

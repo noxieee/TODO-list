@@ -4,18 +4,16 @@ import {TodoTile} from "./TodoTile";
 import {CompletedTitle} from "./CompletedTitle";
 
 export function TodoList({todos, showCompleted, updateTodos}) {
-  console.log("todolist");
-  todos.sort((a, b) => a.completed - b.completed);
   const rows = [];
   let completedExists = false;
   let lastCompleted = false;
 
   if(todos.length === 0 || todos[0].completed) {
-    rows.push(<p className="subtleText">Nothing there...</p>);
+    rows.push(<p key="noPendingTodoText" className="subtleText">Everything done!</p>);
   }
 
   if(showCompleted && todos.length === 0) {
-    rows.push(<CompletedTitle completedExists={completedExists}/>);
+    rows.push(<CompletedTitle key="completedTitle" completedExists={completedExists}/>);
   }
 
   for(const todo of todos) {
@@ -26,13 +24,13 @@ export function TodoList({todos, showCompleted, updateTodos}) {
     }
 
     if(lastCompleted !== todo.completed) {
-      rows.push(<CompletedTitle completedExists={completedExists}/>);
+      rows.push(<CompletedTitle key="completedTitle" completedExists={completedExists}/>);
     }
 
-    rows.push(<TodoTile id={todo.id} title={todo.title} completed={todo.completed} todos={todos} updateTodos={updateTodos}/>);
+    rows.push(<TodoTile key={todo.id} id={todo.id} title={todo.title} completed={todo.completed} todos={todos} updateTodos={updateTodos}/>);
 
     if(todos[todos.length - 1] === todo && !todo.completed && showCompleted) {
-      rows.push(<CompletedTitle completedExists={completedExists}/>);
+      rows.push(<CompletedTitle key="completedTitle" completedExists={completedExists}/>);
     }
 
     lastCompleted = todo.completed;
